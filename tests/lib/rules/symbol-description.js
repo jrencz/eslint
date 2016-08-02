@@ -9,10 +9,10 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-let rule = require("../../../lib/rules/symbol-description"),
-    RuleTester = require("../../../lib/testers/rule-tester");
+const rule = require("../../../lib/rules/symbol-description");
+const RuleTester = require("../../../lib/testers/rule-tester");
 
-let ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 
 ruleTester.run("symbol-description", rule, {
 
