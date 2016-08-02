@@ -31,11 +31,6 @@ ruleTester.run("symbol-description", rule, {
             options: ["always"],
             env: {es6: true}
         },
-        {
-            code: "Symbol();",
-            options: ["never"],
-            env: {es6: true}
-        },
     ],
 
     invalid: [
@@ -52,24 +47,6 @@ ruleTester.run("symbol-description", rule, {
             options: ["always"],
             errors: [{
                 message: "Expected Symbol to have a description.",
-                type: "CallExpression"
-            }],
-            env: {es6: true}
-        },
-        {
-            code: "Symbol(\"Foo\");",
-            options: ["never"],
-            errors: [{
-                message: "Symbols are not allowed to have description.",
-                type: "CallExpression"
-            }],
-            env: {es6: true}
-        },
-        {
-            code: "var foo = \"Foo\"; Symbol(foo);",
-            options: ["never"],
-            errors: [{
-                message: "Symbols are not allowed to have description.",
                 type: "CallExpression"
             }],
             env: {es6: true}

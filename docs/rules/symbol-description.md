@@ -35,7 +35,6 @@ This rule allows enforcing or disallowing symbol descriptions.
 There are two options for this rule:
 
 * `"always"` enforces providing a description (default)
-* `"never"` disallows providing the description
 
 
 ## Examples
@@ -57,16 +56,6 @@ var foo = Symbol();
 var foo = Symbol();
 ```
 
-```js
-/*eslint symbol-description: ["error", "never"]*/
-/*eslint-env es6*/
-
-var foo = Symbol('foo');
-
-var someString = 'bar';
-var bar = Symbol(someString);
-```
-
 Examples of **correct** code for this rule:
 
 ```js
@@ -77,13 +66,6 @@ var foo = Symbol('foo');
 
 var someString = 'bar';
 var bar = Symbol(someString);
-```
-
-```js
-/*eslint symbol-description: ["error", "never"]*/
-/*eslint-env es6*/
-
-var foo = Symbol();
 ```
 
 ```js
