@@ -1,17 +1,29 @@
 # Require/Disallow Symbol Description (symbol-description)
 
-The `Symbol` constructor may have optional description:
+The `Symbol` function may have optional description:
 
 ```js
 var foo = Symbol("foo");
 
 var someString = 'bar';
 var bar = Symbol(someString);
-
 ```
 
 
-Using `description` promotes easier debugging.
+Using `description` promotes easier debugging since when symbol is casted to string the description is used:
+
+```js
+var foo = Symbol("foo");
+
+> console.log(foo);
+// Symbol(foo)
+
+var bar = foo + '';
+// bar === 'Symbol(foo)'
+```
+
+It may facilitate identifying symbols when one is observed during debugging.
+
 
 ## Rule Details
 
@@ -87,7 +99,8 @@ var bar = Symbol(someString);
 
 ## When Not To Use It
 
-This rule should not be used in ES3/5 environments and in case you don't want to enforce either presence or omission of `description`.
+This rule should not be used in ES3/5 environments.
+In addition, this rule can be safely turned off if you don't want to enforce either presence or omission of `description` when creating Symbols.
 
 ## Further Reading
 
