@@ -42,7 +42,7 @@ ruleTester.run("symbol-description", rule, {
         {
             code: "Symbol();",
             errors: [{
-                message: "Symbols are supposed to have a description.",
+                message: "Expected Symbol to have a description.",
                 type: "CallExpression"
             }],
             env: {es6: true}
@@ -51,7 +51,7 @@ ruleTester.run("symbol-description", rule, {
             code: "Symbol();",
             options: ["always"],
             errors: [{
-                message: "Symbols are supposed to have a description.",
+                message: "Expected Symbol to have a description.",
                 type: "CallExpression"
             }],
             env: {es6: true}
