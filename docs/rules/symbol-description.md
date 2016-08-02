@@ -30,27 +30,12 @@ It may facilitate identifying symbols when one is observed during debugging.
 This rule allows enforcing or disallowing symbol descriptions.
 
 
-## Options
-
-There are two options for this rule:
-
-* `"always"` enforces providing a description (default)
-
-
 ## Examples
 
 Examples of **incorrect** code for this rule:
 
 ```js
-/*eslint symbol-description: ["error"]*/
-/*eslint-env es6*/
-
-var foo = Symbol();
-```
-
-
-```js
-/*eslint symbol-description: ["error", "always"]*/
+/*eslint symbol-description: "error"*/
 /*eslint-env es6*/
 
 var foo = Symbol();
@@ -60,16 +45,6 @@ Examples of **correct** code for this rule:
 
 ```js
 /*eslint symbol-description: "error"*/
-/*eslint-env es6*/
-
-var foo = Symbol('foo');
-
-var someString = 'bar';
-var bar = Symbol(someString);
-```
-
-```js
-/*eslint symbol-description: ["error", "always"]*/
 /*eslint-env es6*/
 
 var foo = Symbol('foo');

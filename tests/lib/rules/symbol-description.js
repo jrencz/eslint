@@ -22,13 +22,7 @@ ruleTester.run("symbol-description", rule, {
             env: {es6: true}
         },
         {
-            code: "Symbol(\"Foo\");",
-            options: ["always"],
-            env: {es6: true}
-        },
-        {
-            code: "var foo = \"Foo\"; Symbol(foo);",
-            options: ["always"],
+            code: "var foo = \"foo\"; Symbol(foo);",
             env: {es6: true}
         },
     ],
@@ -36,15 +30,6 @@ ruleTester.run("symbol-description", rule, {
     invalid: [
         {
             code: "Symbol();",
-            errors: [{
-                message: "Expected Symbol to have a description.",
-                type: "CallExpression"
-            }],
-            env: {es6: true}
-        },
-        {
-            code: "Symbol();",
-            options: ["always"],
             errors: [{
                 message: "Expected Symbol to have a description.",
                 type: "CallExpression"
