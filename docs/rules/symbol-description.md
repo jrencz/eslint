@@ -1,4 +1,4 @@
-# Require/Disallow Symbol Description (symbol-description)
+# Require Symbol Description (symbol-description)
 
 The `Symbol` function may have optional description:
 
