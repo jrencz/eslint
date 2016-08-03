@@ -17,9 +17,6 @@ var foo = Symbol("foo");
 
 > console.log(foo);
 // Symbol(foo)
-
-var bar = foo + '';
-// bar === 'Symbol(foo)'
 ```
 
 It may facilitate identifying symbols when one is observed during debugging.
