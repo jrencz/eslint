@@ -10,7 +10,7 @@ var bar = Symbol(someString);
 ```
 
 
-Using `description` promotes easier debugging since when symbol is casted to string the description is used:
+Using `description` promotes easier debugging: when a symbol is logged the description is used:
 
 ```js
 var foo = Symbol("foo");
